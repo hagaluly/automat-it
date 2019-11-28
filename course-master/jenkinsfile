@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    options {
+        skipDefaultCheckout true
+    }
+    stages {
+        stage('Build') { 
+            steps {
+                sh 'ls $WORKSPACE'
+                sh 'echo "Build"'
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                sh 'echo "Deploy"'
+            }
+        }
+        stage('Test') { 
+            steps {
+                sh 'echo "Test"' 
+            }
+        }
+    }
+}
+
